@@ -175,7 +175,7 @@ def bulksearch(ids):
 		print("ids i = " + str(ids[i]))
 		print("frtsSymb = " + str(frstSymb))
 		print("ids[i][:1] = " + str(ids[i][:1]))
-		if (frstSymb == ids[i][:1]):
+		if (frstSymb == ids[i][:1]) or (frstSymb.isdigit() and ids[i][:1].isdigit()):
 			frstList[j][i] = ids[i]
 			
 		else:
@@ -186,8 +186,10 @@ def bulksearch(ids):
 		print("email " + str(frstList[j][i]))
 		resp += str(frstList[j][i]) + "<br>"
 
-	for m in range(j):
-		resp += str(frstList[j]) + "<br>"
+	for a in range(j):
+		for b in range(i):
+			resp += str(frstList[a][b]) + ","
+		resp += '<br>'
 
 	"""frstSymb = id[:1]
 	if (frstSymb.isdigit()):
