@@ -162,7 +162,38 @@ def bulksearch(ids):
 	print (str(ids))
 	ids = ids.split(',')
 	ids.sort()
-	resp = str(ids)
+
+
+	frstList = [ [0]*30 for k in range(1000)] 
+	resp = ''
+	frstSymb = ids[0][:1]
+	
+	j = 0
+	for i in range(len(ids)):	# i - first letter of email
+		print("i = " + str(i))
+		print("j = " + str(j))
+		print("ids i = " + str(ids[i]))
+		print("frtsSymb = " + str(frstSymb))
+		print("ids[i][:1] = " + str(ids[i][:1]))
+		if (frstSymb == ids[i][:1]):
+			frstList[j][i] = ids[i]
+			
+		else:
+			frstSymb = ids[i][:1]
+			j = j + 1
+			
+		frstList[j][i] = ids[i]
+		print("email " + str(frstList[j][i]))
+		resp += str(frstList[j][i]) + "<br>"
+
+	for m in range(j):
+		resp += str(frstList[j]) + "<br>"
+
+	"""frstSymb = id[:1]
+	if (frstSymb.isdigit()):
+		collection = 'leaks_number'
+	"""
+	#resp = str(ids)
 	#bulksearch = mongo.db.user.find()
 	#resp = dumps(bulksearch)
 	
