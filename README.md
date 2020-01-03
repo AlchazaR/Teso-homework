@@ -1,4 +1,4 @@
-# Tesonet užduotis
+# Teso užduotis
 ## Serverio paruošimas:
 Saugumui padidinti buvo atlikti šie pakeitimai:
 * Sukurtas naujas vartotojas - akaroot
