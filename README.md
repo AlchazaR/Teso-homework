@@ -1,4 +1,15 @@
 # Teso užduotis
+Sukurti ir paleisti API servisą pagal šiuos reikalavimus (serveris suteiktas, prisijungimo prie serverio ir
+duomenų bazės informacija nurodyta žemiau):
+1. Laisvai pasirenkamas autentifikacijos būdas;
+2. Laisvai pasirenkami servisai ir programavimo kalbos (NodeJS, Flask, t.t.);
+3. Sukurti vieną API endpontą (https://*******.com/search/example@mail.com);
+4. Sukurti saugumo politiką (pub key authentication, no uneccessary open ports, etc);
+5. Įdiegti NGINX reverse proxy, įdiegti let‘s encrypt SSL certifikatą;
+6. BONUS1: suformatuoti duomenis (pakeisti id į email, išvesti į human readable formatą,
+pasiekiamą WEB platformoje).
+7. BONUS2: sukurti paprastą API vartotojų management‘o sistemą.
+
 ## Serverio paruošimas:
 Saugumui padidinti buvo atlikti šie pakeitimai:
 * Sukurtas naujas vartotojas - akaroot
